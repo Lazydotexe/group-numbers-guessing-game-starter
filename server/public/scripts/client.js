@@ -7,7 +7,7 @@ function handleReady() {
 
 
   getGuess()
-  // getRandomNumber()
+  getRandomNumber()
 
 }
 //-------------------------------------------------------------------------------------------
@@ -138,3 +138,5 @@ let render = () => {
 
 
 // let resetBtn = () => console.log('inside reset')
+
+//GO BACK UNTIL 

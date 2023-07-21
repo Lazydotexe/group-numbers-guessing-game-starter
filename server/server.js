@@ -24,6 +24,17 @@ console.log(randomNbr);
 let guesses = [];
 
 
+// app.post("/randomNbr",(req, res) => {
+//     console.log("in randomNbr");
+
+//     let addItem = req.body
+//     inventory.push(addItem)
+
+//     console.log("currentInventory:", inventory)
+//     res.send(inventory)
+//     res.sendStatus(201)
+// })
+
 //-------------------------------------------------------------------------------------------
 
 
@@ -52,11 +63,11 @@ app.post("/guessed",(req, res) => {
 
 
 app.get('/getRandom', (req, res) => {
-
+  // Generate a random number (e.g., between 1 and 100) to send as the response
+  // const randomNbr = Math.floor(Math.random() * 100) + 1;
+  console.log(randomNbr);
   res.send(randomNbr.toString());
 });
-
-
 
 //-------------------------------------------------------------------------------------------
 
@@ -81,6 +92,7 @@ app.post('/getRandom', (req, res) => {
   
 
 });
+
 
 
 
