@@ -18,8 +18,8 @@ let magicNbr;
 //-------------------------------------------------------------------------------------------
 
 
-let submitBtn = () => {  // This saves both players inputs as an object.
-  const playerGuess = {
+let submitBtn = () => {  
+  const playerGuess = { // This saves both players inputs as an object
     player1: $("#input1").val(),
     player2: $("#input2").val(),
   }
@@ -37,12 +37,12 @@ let submitBtn = () => {  // This saves both players inputs as an object.
   }).then((response) => {
     console.log("POST was successful:", response)
 
-    $.ajax({
-      method: "POST",
-      url: "/getRandom",
-      data: playerGuess
-    }).then((response) => {
-      console.log("POST was successful:", response)
+    // $.ajax({
+    //   method: "POST",
+    //   url: "/getRandom",
+    //   data: playerGuess
+    // }).then((response) => {
+    //   console.log("POST was successful:", response)
 
 
 
@@ -55,8 +55,8 @@ let submitBtn = () => {  // This saves both players inputs as an object.
     })
   
 
-  })
-}
+  }
+
 //-------------------------------------------------------------------------------------------
 
 
@@ -104,7 +104,7 @@ let getRandom = () => {
 
     $.ajax({
       method: 'GET',
-      url: '/getRandom'
+      url: '/listOfGuesse'
     }).then((response) => {
       console.log(response)
       guessNumber = response

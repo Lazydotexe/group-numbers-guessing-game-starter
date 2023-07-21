@@ -62,16 +62,16 @@ app.post("/guessed",(req, res) => {
 //-------------------------------------------------------------------------------------------
 
 
-app.get('/getRandom', (req, res) => {
-  // Generate a random number (e.g., between 1 and 100) to send as the response
-  // const randomNbr = Math.floor(Math.random() * 100) + 1;
-  console.log(randomNbr);
-  res.send(randomNbr.toString());
-});
+// app.get('/getRandom', (req, res) => {
+//   // Generate a random number (e.g., between 1 and 100) to send as the response
+//   // const randomNbr = Math.floor(Math.random() * 100) + 1;
+//   console.log(randomNbr);
+//   res.send(randomNbr.toString());
+// });
 
 //-------------------------------------------------------------------------------------------
 
-app.post('/getRandom', (req, res) => {
+app.get('/getRandom', (req, res) => {
   const mostRecentGuess = guesses[guesses.length - 1];
   let toLow = "player1 is to low"
   let toHigh = "player1 is to high"
