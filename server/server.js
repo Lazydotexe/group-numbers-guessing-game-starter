@@ -17,6 +17,46 @@ app.listen(PORT, () => {
   
 })
 
+// function randomNumber(num1, num2) {
+//   return Math.floor(Math.random() * (num2 - num1) + num1);
+    
+// }
+
+// console.log(randomNumber(1, 25))
+
+let timesGuessed;
+
+let guesses = [];
+
+app.post("/randomNbr",(req, res) => {
+    console.log("in randomNbr");
+
+    // let addItem = req.body
+    // inventory.push(addItem)
+
+    // console.log("currentInventory:", inventory)
+    // res.send(inventory)
+    // res.sendStatus(201)
+})
+
+app.get('/listOfGuesses', (req, res) => {
+  console.log("Arrived at /Guesses", guesses)
+  
+  // res.send(timesGuessed)
+  res.send(guesses)
+})
 
 
+app.post("/guessed",(req, res) => {
+  console.log("Body for addquote:", req.body);
 
+  let addGuess = req.body
+  guesses.push(addGuess)
+
+  console.log("Guesses:", guesses)
+  res.send(guesses)
+  res.sendStatus(201)
+})
+
+
+// timesGuessed += 1;

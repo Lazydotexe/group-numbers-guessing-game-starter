@@ -1,0 +1,29 @@
+/* .guesses {
+    display: block;
+} */
+
+p {
+    display: inline;
+    margin-left: 3%;
+    
+}
+
+    #p2 {
+    margin-left: 5%;
+    margin-top: 100px;
+    }
+
+    #guesses {
+        margin-top: 10px;
+    }
+
+    input {
+        margin-left: 2%;
+    }
+
+
+
+    h1 {
+        margin-left: 2%;
+    }
+
