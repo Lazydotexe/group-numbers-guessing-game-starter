@@ -6,8 +6,8 @@ function handleReady() {
   // $("#resetBtn").on('click', resetBtn)
 
 
-  getGuess()
-  getRandomNumber()
+  // getGuess()
+  // getRandomNumber()
 
 }
 //-------------------------------------------------------------------------------------------
@@ -47,7 +47,9 @@ let submitBtn = () => {
 
 
       getGuess()
-      render()
+      getRandomNumber()
+
+      // render()
 
     }).catch((error) => {
       console.log("Error with POST request:", error)
@@ -85,7 +87,6 @@ let getGuess = () => {
       method: 'GET',
       url: '/getRandom'
     }).then((response) => {
-      console.log('this is the random number', response);
       magicNbr = response
       render()
 
